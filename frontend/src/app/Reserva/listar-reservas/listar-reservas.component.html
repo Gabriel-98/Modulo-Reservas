@@ -1,0 +1,35 @@
+<div class="container">
+	<div class="card">
+		<div class="card-header">
+			<h3>Reservas</h3>
+		</div>
+		<div class="card-body">
+			<table>
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>CEDULA</th>
+						<th>HABITACION</th>
+						<th>FECHA LLEGADA</th>
+						<th>FECHA SALIDA</th>
+						<th>COSTO</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let reserva of reservas" class="text-center">
+						<td>{{reserva.idReserva}}</td>
+						<td>{{reserva.cedula}}</td>
+						<td>{{reserva.idHabitacion}}</td>
+						<td>{{reserva.fechaLlegada}}</td>
+						<td>{{reserva.fechaSalida}}</td>
+						<td>{{reserva.costo}}</td>						
+						<td>
+							<button class="btn btn-warning">Editar</button>
+							<button class="btn btn-danger">Delete</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
