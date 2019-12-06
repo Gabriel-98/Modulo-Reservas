@@ -1,31 +1,42 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListarReservasComponent } from './Reserva/listar-reservas/listar-reservas.component';
-import { AddReservaComponent } from './Reserva/add-reserva/add-reserva.component';
-import { EditReservaComponent } from './Reserva/edit-reserva/edit-reserva.component';
-import { FormsModule } from '@angular/forms';
-import { ServiceService } from '../app/Service/service.service';
-import { HttpClientModule } from '@angular/common/http';
-import { AddHuespedComponent } from './Reserva/add-huesped/add-huesped.component';
+
+
+import { AddHabitacionComponent } from './habitaciones/add-habitacion/add-habitacion.component';
+import { AddTipoHabitacionComponent } from './habitaciones/add-tipo-habitacion/add-tipo-habitacion.component';
+import { ListarHabitacionesComponent } from './habitaciones/listar-habitaciones/listar-habitaciones.component';
+import { EditHabitacionComponent } from './habitaciones/edit-habitacion/edit-habitacion.component';
+import { EditTipoHabitacionComponent } from './habitaciones/edit-tipo-habitacion/edit-tipo-habitacion.component';
+
+import { AddReservaComponent } from './reservas/add-reserva/add-reserva.component';
+import { ConsultarReservasComponent } from './reservas/consultar-reservas/consultar-reservas.component';
+import { ListarReservasComponent } from './reservas/listar-reservas/listar-reservas.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListarReservasComponent,
+    AddHabitacionComponent,
+    AddTipoHabitacionComponent,
+    ListarHabitacionesComponent,
     AddReservaComponent,
-    EditReservaComponent,
-    AddHuespedComponent
+    ConsultarReservasComponent,
+    EditHabitacionComponent,
+    EditTipoHabitacionComponent,
+    ListarReservasComponent    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [ServiceService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,11 +1,11 @@
 export class Reserva{
 	idReserva:number;
-	cedula:String;
-	idHabitacion:number;
-	fechaLlegada:String;
-	fechaSalida:String;
-	costo:String;
+	cedula:string;
+	idHabitacion:string;
+	fechaLlegada:string;
+	fechaSalida:string;
+	costo:number;
 	cancelada:boolean;
-	fechaCancelacion:String;
-	fechaCreacion:String;
+	fechaCancelacion:string;
+	fechaCreacion:string;
 }

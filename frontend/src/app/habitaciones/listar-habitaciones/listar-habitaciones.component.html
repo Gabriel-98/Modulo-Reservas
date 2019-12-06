@@ -1,0 +1,62 @@
+<div class="container">
+	<div class="card">
+		<div class="card-header">
+			<h3>
+				<button (click)="AddTipoHabitacion()" class="btn btn-primary">+</button>
+				Tipos de Habitaciones
+			</h3>
+		</div>
+		<div class="card-body">
+			<table>
+				<thead>
+					<tr>
+						<th>NOMBRE</th>
+						<th>DESCRIPCION</th>
+						<th>MAXIMO DE OCUPANTES</th>
+						<th>COSTO BASE</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let tipoHabitacion of tiposHabitacion" class="text-center">
+						<td>{{tipoHabitacion.idTipoHabitacion}}</td>
+						<td>{{tipoHabitacion.descripcion}}</td>
+						<td>{{tipoHabitacion.maxOcupantes}}</td>
+						<td>{{tipoHabitacion.costoBase}}</td>			
+						<td>
+							<button (click)="EditTipoHabitacion(habitacion)" class="btn btn-warning">Editar</button>
+							<button (click)="DeleteTipoHabitacion(tipoHabitacion.idTipoHabitacion)" class="btn btn-danger">Eliminar</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		
+	</div>
+	<div class="card">
+		<div class="card-header">
+			<h3>
+				<button (click)="AddHabitacion()" class="btn btn-primary">+</button>
+				Habitaciones
+			</h3>
+		</div>
+		<div class="card-body">
+			<table>
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>TIPO DE HABITACION</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let habitacion of habitaciones" class="text-center">
+						<td>{{habitacion.idHabitacion}}</td>
+						<td>{{habitacion.idTipoHabitacion}}</td>
+						<td>
+							<button (click)="EditHabitacion(habitacion)" class="btn btn-warning">Editar</button>
+							<button (click)="DeleteHabitacion(habitacion.idHabitacion)" class="btn btn-danger">Eliminar</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

@@ -11,13 +11,18 @@ export class AppComponent {
 
   constructor(private router:Router){}
 
-  Listar(){
-  	console.log("listar");
-  	this.router.navigate(["listar"]);
+  LinkToConfiguracion(){
+  	console.log("configuracion/listar");
+  	this.router.navigate(["habitaciones"]);
   }
 
-  Nuevo(){
-  	console.log("nuevo");
-  	this.router.navigate(["addReserva"]);
+  LinkToReservar(){
+  	console.log("reservas/crear");
+  	this.router.navigate(["reservas/agregar"]);
+  }
+
+  LinkToConsultarReservas(){
+  	console.log("reservas/listar");
+  	this.router.navigate(["reservas/consultar"]);
   }
 }

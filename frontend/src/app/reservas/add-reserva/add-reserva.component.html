@@ -1,0 +1,52 @@
+<div class="container col-md-6">
+	<div class="card" style="float: left">
+		<div class="card-header">
+			<h3>Nueva Habitacion</h3>
+		</div>
+		<div class="card-body">
+			<form action="">
+				<div class="form-group">
+					<label for="">fechaLlegada:</label>
+					<input [(ngModel)]="peticionReserva.fechaLlegada"
+					name="nombre" type="text" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="">fecha de salida:</label>
+					<input [(ngModel)]="peticionReserva.fechaSalida"
+					name="nombre" type="text" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="">tipo de habitacion:</label>
+					<input [(ngModel)]="peticionReserva.idTipoHabitacion"
+					name="nombre" type="text" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="">cedula:</label>
+					<input [(ngModel)]="peticionReserva.cedula"
+					name="nombre" type="text" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="">nombre:</label>
+					<input [(ngModel)]="peticionReserva.nombre"
+					name="nombre" type="text" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="">apellidos:</label>
+					<input [(ngModel)]="peticionReserva.apellidos"
+					name="nombre" type="text" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="">email:</label>
+					<input [(ngModel)]="peticionReserva.email"
+					name="nombre" type="text" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="">telefono:</label>
+					<input [(ngModel)]="peticionReserva.telefono"
+					name="nombre" type="text" class="form-control">
+				</div>
+				<button (click)="Guardar()" class="btn btn-success">Guardar</button>
+			</form>
+		</div>
+	</div>
+</div>

@@ -6,11 +6,12 @@ import javax.persistence.GenerationType;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import javax.persistence.Table;
-
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 import lombok.Data;
 
@@ -29,10 +30,11 @@ public class Reserva {
 	
 	@ManyToOne
 	@JoinColumn(name="cedula", nullable=false, referencedColumnName="cedula")
-	private Usuario usuario;
+	private Huesped huesped;
 	
-	@Column(name="id_habitacion", nullable=false)
-	private int idHabitacion;
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="id_habitacion", referencedColumnName="id_habitacion")
+	private Habitacion idHabitacion;
 	
 	@Column(name="fecha_llegada", nullable=false)
 	@JsonFormat(pattern="yyyy/MM/dd")
@@ -52,7 +54,7 @@ public class Reserva {
 	@JsonFormat(pattern="yyyy/MM/dd'T'HH:mm:ss")
 	private LocalDateTime fechaCancelacion;
 	
-	@Column(name="fecha_creacion")
+	@Column(name="fecha_creacion", nullable=false)
 	@JsonFormat(pattern="yyyy/MM/dd'T'HH:mm:ss")
 	private LocalDateTime fechaCreacion;
 }

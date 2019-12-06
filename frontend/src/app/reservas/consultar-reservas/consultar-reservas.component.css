@@ -1,0 +1,15 @@
+.container1{
+	position:relative;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.card{
+	float:left;
+	position:relative;
+}
+
+.A{
+	position: absolute;
+	display: inline-block;
+}

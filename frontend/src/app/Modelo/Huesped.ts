@@ -4,4 +4,6 @@ export class Huesped{
 	apellidos:string;
 	email:string;
 	telefono:string;
+	codigo:string;
+	fechaCreacion:string;
 }
